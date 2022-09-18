@@ -1,0 +1,28 @@
+<!--
+ * @Desc: 
+ * @Author: yomuki
+ * @Date: 2022-09-18 16:08:19
+ * @LastEditors: yomuki
+ * @LastEditTime: 2022-09-18 16:45:53
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<p id="imgsrc"></p>
+		<p id="text"></p>
+	</body>
+	<script src="./lib/animal-api.js"></script>
+	<script>
+		console.log(AnimalApi);
+		AnimalApi.default.getDog().then((res) => {
+			document.querySelector("#imgsrc").textContent = res.imgSrc;
+			document.querySelector("#text").textContent = res.text;
+		});
+	</script>
+</html>
