@@ -12,7 +12,11 @@ module.exports = {
 		"subject-empty": [2, "never"],
 		"type-empty": [2, "never"],
 		"subject-case": [0],
-		"type-enum": [2, "always", ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore", "revert"]],
+		"type-enum": [
+			2,
+			"always",
+			["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore", "revert", "study"],
+		],
 	},
 	prompt: {
 		alias: { fd: "docs: fix typos" },
@@ -29,6 +33,7 @@ module.exports = {
 			confirmCommit: "是否提交或修改commit ?",
 		},
 		types: [
+			{ value: "study", name: "feat:     ⌨️学习记录 | A study record", emoji: "⌨️" },
 			{ value: "feat", name: "feat:     🚀新增功能 | A new feature", emoji: "🚀" },
 			{ value: "fix", name: "fix:      🐛修复缺陷 | A bug fix", emoji: "🐛" },
 			{ value: "docs", name: "docs:     📚文档更新 | Documentation only changes", emoji: "📚" },

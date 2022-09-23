@@ -14,4 +14,28 @@ module.exports = {
 		library: "AnimalApi", // 公共库对外暴露命名空间
 		libraryTarget: "var",
 	},
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /(node_modules|lib)/,
+				use: {
+					loader: "babel-loader",
+					options: {
+						presets: [
+							[
+								"@babel/preset-env",
+								{
+									targets: {
+										node: "current",
+									},
+								},
+							],
+						],
+						plugins: [["@babel/plugin-transform-modules-umd", {}]],
+					},
+				},
+			},
+		],
+	},
 };
