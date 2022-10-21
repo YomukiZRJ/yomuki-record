@@ -1,0 +1,26 @@
+{
+	"name": "create-lib",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "工具说明",
+	"main": "index.js",
+	"scripts": {
+		"build": "rollup -c"
+	},
+	"keywords": [],
+	"author": "Yomuki",
+	"license": "MIT",
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^23.0.1",
+		"@rollup/plugin-node-resolve": "^15.0.0",
+		"@rollup/plugin-typescript": "^9.0.1",
+		"rollup": "^3.2.3",
+		"rollup-plugin-cleandir": "^2.0.0",
+		"rollup-plugin-dts": "^5.0.0",
+		"rollup-plugin-terser": "^7.0.2"
+	},
+	"engines": {
+		"node": ">=13.2.0",
+		"npm": ">=6.13.1"
+	}
+}
